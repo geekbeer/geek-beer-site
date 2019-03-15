@@ -15,7 +15,7 @@ const Footer = () => (
       }}
     >
       <p>
-        Copyright ©© {new Date().getFullYear()} Geek Beer. All rights reserved.
+        Copyright © {new Date().getFullYear()} Geek Beer. All rights reserved.
       </p>
     </div>
   </footer>
