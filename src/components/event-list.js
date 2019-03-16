@@ -1,22 +1,33 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-export default class EventList extends React.Component {
-  listItems = () => {
-    const list = [1,2,3,4,5,6,7,8];
-    let items = [];
-
-    for(let i = 0; list.length > i; i = i + 1) {
-      items.push(<li>{list[i]}</li>);
-    }
-
-    return items;
-  }
-
-  render() {
+const listItems = (data) => {
+  return data.contentful.events.map((event) => {
     return (
-      <ul>
-        {this.listItems()}
-      </ul>
-    )
-  }
+      <li key={event.id}>
+        <Link to={`/meetup/${event.uri}`}>{event.title}</Link>
+      </li>
+    );
+  });
+};
+
+export default () => {
+  const data = useStaticQuery(graphql`
+      query query {
+          contentful {
+              events {
+                  id
+                  uri
+                  title
+                  description
+              }
+          }
+      }
+  `);
+
+  return (
+    <ul>
+      {listItems(data)}
+    </ul>
+  )
 }
