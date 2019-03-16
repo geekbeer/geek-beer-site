@@ -1,15 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import EventList from "../components/event-list"
 
 const EventsPage = () => (
   <Layout>
-    <SEO title="Events" />
-    <h1>Tidigare events</h1>
-
-    <Link to="/">Start</Link>
+    <SEO title="Meetups" />
+    <h1>Geek Beer Meetups</h1>
+    <EventList/>
   </Layout>
 )
 
