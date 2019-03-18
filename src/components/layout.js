@@ -25,11 +25,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div style={{
-          padding: '24px 32px',
-          margin: '0 auto',
-          width: '80%'
-        }}>
+        <div className="page">
             <Header siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>
             <Footer/>
