@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Geek Beer - Ett tech meetup`,
@@ -36,7 +40,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "contentful",
         // URL to query from
-        url: "http://localhost:4000",
+        url: process.env.GRAPHQL_SERVER,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

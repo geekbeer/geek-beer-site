@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../stylesheets/geek-beer.scss";
-
 export default ({data}) => {
   const page = data.contentful.startPage;
   return (
