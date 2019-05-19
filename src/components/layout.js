@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "../stylesheets/geek-beer.scss";
 import Header from "./header"
 import Footer from "./footer"
@@ -26,17 +27,20 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <div className="page">
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <main>{children}</main>
-            <Footer/>
+          <Helmet>
+            <link rel="stylesheet" href="https://use.typekit.net/tmf7cag.css"/>
+          </Helmet>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main className="main">{children}</main>
+          <Footer/>
         </div>
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default Layout

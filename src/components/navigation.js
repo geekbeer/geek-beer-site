@@ -32,7 +32,7 @@ function navItems() {
   return items.map(function(item, index) {
     return (
       <li className="nav-list-item" key={index}>
-        <Link to={item.url}>{item.text}</Link>
+        <Link activeClassName="active" className="nav-list-link" to={item.url}>{item.text}</Link>
       </li>
     );
   });

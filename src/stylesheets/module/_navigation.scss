@@ -1,20 +1,23 @@
 .navigation {
   display: block;
+  background-image: url('../assets/tri-bar.svg');
+  background-repeat: repeat-x;
 }
 
 .nav-list {
+  @extend %centerContainer;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin: 0;
+  justify-content: space-evenly;
   padding: 0;
+  margin-bottom: 3rem;
 }
 
 .nav-list-item {
   display: block;
   list-style: none;
   margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0;
 
   &:first-child {
     margin-left: 0;
@@ -22,5 +25,35 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.nav-list-link {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #09233B;
+  display: inline-block;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  padding: 3rem 1.5rem 1.25rem 1.5rem;
+  text-decoration: none;
+
+  &.active {
+    background-color: #09233B;
+    color: #ffffff;
+
+    &:hover {
+      background-image: none;
+      color: #ffffff;
+    }
+  }
+
+  &:hover {
+    background-image: url('../assets/link-hover.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    color: #F6A713;
   }
 }
