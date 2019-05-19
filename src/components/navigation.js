@@ -20,8 +20,8 @@ function navItems() {
       url: '/about'
     },
     {
-      text: 'Sponsor',
-      url: '/sponsor'
+      text: 'Sponsra!',
+      url: '/sponsra'
     },
     {
       text: 'Jobblistan',

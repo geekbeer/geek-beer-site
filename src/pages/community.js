@@ -2,15 +2,28 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {graphql} from "gatsby";
 
-const CommunityPage = () => (
-  <Layout>
-    <SEO title="Geek Beer Community" />
-    <h1>Bli en del av vår community!</h1>
-    <p>
-      För härligt häng mellan Geek Beer Meetup gå med i vår Slack kanal.
-    </p>
-  </Layout>
-)
+import PageContent from "../components/page-contet";
+
+const CommunityPage = ({ data }) => {
+  const page = data.contentful.page;
+  return (
+    <Layout>
+      <SEO title={page.pageTitle} />
+      <PageContent content={page.content}/>
+    </Layout>
+  );
+};
+
+export const query = graphql`
+    query {
+        contentful {
+            page(uri: "/community") {
+                ...pageContent
+            }
+        }
+    }
+`;
 
 export default CommunityPage

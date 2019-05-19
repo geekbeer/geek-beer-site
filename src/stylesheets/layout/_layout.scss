@@ -10,4 +10,12 @@
 
 .footer {
   @extend %centerContainer;
+  border-top: 1px solid #cccccc;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+
+  > p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }

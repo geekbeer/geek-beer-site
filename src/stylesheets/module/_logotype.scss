@@ -1,8 +1,16 @@
 .logotype {
+  margin: 2rem 0;
+  padding: 0;
   text-align: center;
 
   > a {
-    color: #000000;
+    display: inline-block;
     text-decoration: none;
+
+    > img {
+      display: inline-block;
+      height: auto;
+      width: 320px;
+    }
   }
 }
