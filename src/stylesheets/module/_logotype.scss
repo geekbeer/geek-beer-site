@@ -1,5 +1,5 @@
 .logotype {
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 0;
   text-align: center;
 
@@ -10,7 +10,19 @@
     > img {
       display: inline-block;
       height: auto;
-      width: 320px;
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .logotype {
+    margin: 2rem 0;
+
+    > a {
+      > img {
+        width: 320px;
+      }
     }
   }
 }

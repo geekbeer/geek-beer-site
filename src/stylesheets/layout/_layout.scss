@@ -5,11 +5,11 @@
 
 
 .main {
-  @extend %centerContainer;
+  @include centerContainer;
 }
 
 .footer {
-  @extend %centerContainer;
+  @include centerContainer;
   border-top: 1px solid #cccccc;
   padding-top: 1rem;
   margin-bottom: 3rem;
