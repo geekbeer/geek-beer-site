@@ -38,14 +38,38 @@ function navItems() {
   });
 }
 
-const Navigation = () => {
-  return (
-    <nav className="navigation">
-      <ul className="nav-list">
-        {navItems()}
-      </ul>
-    </nav>
-  );
-};
+class Navigation extends React.Component {
+  constructor() {
+    super();
+    this.state = {isOpen: false}
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu() {
+    this.setState(state => ({
+      isOpen: !state.isOpen
+    }));
+  }
+
+  render() {
+    let className = 'navigation';
+    let nav = 'nav-wrapper';
+    if (this.state.isOpen) {
+      className += ' is-open';
+      nav += ' is-open';
+    }
+
+    return (
+      <div className={nav}>
+        <button className="nav-btn" onClick={this.toggleMenu} type="button">M</button>
+        <nav className={className}>
+          <ul className="nav-list">
+            {navItems()}
+          </ul>
+        </nav>
+      </div>
+    );
+  }
+}
 
 export default Navigation;

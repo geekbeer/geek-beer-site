@@ -1,11 +1,39 @@
+.nav-wrapper {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.is-open {
+    background-color: #09233B;
+  }
+}
+
 .navigation {
-  background-color: #09233B;
   display: block;
   top: 0;
   left: 0;
-  position: absolute;
-  height: 100vh;
+  position: relative;
+  height: 0vh;
   width: 100vw;
+  overflow: hidden;
+
+  &.is-open {
+    background-color: #09233B;
+    height: 100vh;
+  }
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 42px;
+  width: 42px;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .nav-list {
