@@ -52,17 +52,17 @@ class Navigation extends React.Component {
   }
 
   render() {
-    let className = 'navigation';
-    let nav = 'nav-wrapper';
+    let navClass = 'navigation';
+    let navButton = 'nav-btn';
     if (this.state.isOpen) {
-      className += ' is-open';
-      nav += ' is-open';
+      navButton += ' is-open';
+      navClass += ' is-open';
     }
 
     return (
-      <div className={nav}>
-        <button className="nav-btn" onClick={this.toggleMenu} type="button">M</button>
-        <nav className={className}>
+      <div>
+        <button className={navButton} onClick={this.toggleMenu} type="button"/>
+        <nav className={navClass}>
           <ul className="nav-list">
             {navItems()}
           </ul>

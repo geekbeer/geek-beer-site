@@ -10,18 +10,30 @@
     > img {
       display: inline-block;
       height: auto;
-      width: 160px;
+      width: 180px;
     }
   }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 640px) {
+  .logotype {
+    > a {
+      > img {
+        height: auto;
+        width: 280px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .logotype {
     margin: 2rem 0;
 
     > a {
       > img {
-        width: 320px;
+        height: auto;
+        width: 380px;
       }
     }
   }
