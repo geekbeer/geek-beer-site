@@ -8,7 +8,6 @@ const listItems = (data) => {
         <Link to={`/meetup/${event.uri}`} className="event-list-link">
           <article className="event-list-article">
             <h1 className="event-list-title">{event.title}</h1>
-            <p>dasf kljasdlfj alskdfjla kdsfjla sdjflaksd jflaksjd flads lf</p>
             <span className="event-list-pseudo-link">Läs mer...</span>
           </article>
         </Link>
