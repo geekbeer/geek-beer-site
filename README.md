@@ -1,45 +1,32 @@
-# sapper-template
+# Geek Beer Website
+Project for Geek Beer - A Tech Meetup website. For more information on Geek Beer, probably the best meetup in southern Sweden checkout [geekbeer.se](https://geekbeer.se).
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+## Prerequisites
+* Node with NPM or Yarn
+* A working version of Geek Beer GraphQL (for local development)
 
+## Get started
+Pretty standard
 
-## Getting started
-
-
-### Using `degit`
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository. Use either the `rollup` or `webpack` branch in `sapper-template`:
-
-```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
-
-
-### Using GitHub templates
-
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) repositories.
-
-
-### Running the project
-
-However you get the code, you can install dependencies and run the project in development mode with:
-
-```bash
-cd my-app
-npm install # or yarn
-npm run dev
-```
+* Clone the repo
+* Run ```npm install```
+* Run ```npm run dev```
 
 Open up [localhost:3000](http://localhost:3000) and start clicking around.
 
 Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 
+## Contribute
+Create pull requests or file issues.
+
+
+## Built on the sapper-template
+
+The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+
+Geek Beer uses the Rollup setup.
 
 ## Structure
-
 Sapper expects to find two directories in the root of your project —  `src` and `static`.
 
 
@@ -102,8 +89,3 @@ Because of that, it's essential that the bundler doesn't treat the package as an
 ```bash
 npm install -D @sveltejs/svelte-virtual-list
 ```
-
-
-## Bugs and feedback
-
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
