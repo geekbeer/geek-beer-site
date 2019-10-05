@@ -4,9 +4,14 @@
 
   const pageQuery = gql`
     {
-        events {
-            title
+      page(uri: "/sponsorship") {
+        id
+        pageTitle
+        pageDescription
+        content {
+          __typename
         }
+      }
     }
   `;
 
@@ -16,25 +21,17 @@
     });
 
     return {
-      events: result.data.events
+      page: result.data.page
     }
   }
 </script>
 
 <script>
-  export let events;
+  export let page;
 </script>
 
 <svelte:head>
-	<title>Geek Beer - A Tech Meetup</title>
+	<title>{page.pageTitle}</title>
 </svelte:head>
 
-<h1>Geek Beer!</h1>
-
-<ul>
-    {#each events as event}
-        <li>
-        {event.title}
-        </li>
-    {/each}
-</ul>
+<h1>{page.pageTitle}</h1>

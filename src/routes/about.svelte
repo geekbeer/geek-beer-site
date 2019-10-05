@@ -16,24 +16,22 @@
   `;
 
   export async function preload() {
-    const data = await client.query({
+    const result = await client.query({
       query: pageQuery
     });
 
-    console.log(data.data.page);
-
     return {
-      data: data.data.page
+      page: result.data.page
     }
   }
 </script>
 
 <script>
-  export let data;
+  export let page;
 </script>
 
 <svelte:head>
-	<title>Vad är Geek Beer?</title>
+	<title>{page.pageTitle}</title>
 </svelte:head>
 
-<h1>{data.pageTitle}</h1>
+<h1>{page.pageTitle}</h1>
