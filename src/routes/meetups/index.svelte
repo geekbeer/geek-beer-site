@@ -1,38 +1,30 @@
 <script context="module">
   import {client} from '../../graphql/client';
-  import gql from 'graphql-tag';
-
-  const pageQuery = gql`
-     {
-      page(uri: "/meetups") {
-        id
-        pageTitle
-        pageDescription
-        content {
-          __typename
-        }
-      }
-      events {
-        title
-      }
-    }
-  `;
+  import pageQuery from '../../graphql/queries/page.gql.js';
+  import eventsQuery from '../../graphql/queries/events.gql.js';
 
   export async function preload() {
-    const result = await client.query({
-      query: pageQuery
+    const page = client.query({
+      query: pageQuery,
+      variables: {"uri": "/meetups"}
     });
 
+    const events = client.query({
+      query: eventsQuery
+
+    });
+
+    const result = await Promise.all([page, events]);
+
     return {
-      page: result.data.page,
-      events: result.data.events
+      page: result[0].data.page,
+      events: result[1].data.events,
     }
   }
 </script>
 
 <script>
-  export let page;
-  export let events;
+  export let events, page;
 </script>
 
 <svelte:head>
