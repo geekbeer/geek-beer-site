@@ -1,23 +1,11 @@
 <script context="module">
   import {client} from '../graphql/client';
-  import gql from 'graphql-tag';
-
-  const pageQuery = gql`
-    {
-      page(uri: "/sponsorship") {
-        id
-        pageTitle
-        pageDescription
-        content {
-          __typename
-        }
-      }
-    }
-  `;
+  import pageQuery from '../graphql/queries/page.gql.js';
 
   export async function preload() {
     const result = await client.query({
-      query: pageQuery
+      query: pageQuery,
+      variables: {"uri": "/sponsorship"}
     });
 
     return {
