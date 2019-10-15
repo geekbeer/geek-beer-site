@@ -33,7 +33,7 @@
 
 <h1>Geek Beer!</h1>
 
-<ul>
+<ul class="event-list">
     {#each events as event}
         <li>
         {event.title}

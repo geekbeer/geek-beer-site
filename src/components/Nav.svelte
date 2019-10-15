@@ -27,7 +27,7 @@
 
 <style type="text/scss">
 .nav-btn {
-  background: transparent url('../assets/hamburger.svg') no-repeat 50% 50%;
+  background: transparent url('/hamburger.svg') no-repeat 50% 50%;
   border: none;
   position: fixed;
   display: block;
@@ -42,7 +42,7 @@
   }
 
   &.is-open {
-    background-image: url('../assets/hamburger-close.svg');
+    background-image: url('/hamburger-close.svg');
   }
 }
 
@@ -108,7 +108,7 @@
   }
 
   .navigation {
-    background: url('../assets/tri-bar.svg') repeat-x 0 0;
+    background: url('/tri-bar.svg') repeat-x 0 0;
     display: block;
     height: auto;
     position: relative;
@@ -149,7 +149,7 @@
     }
 
     &:hover {
-      background: url('../assets/link-hover.svg') no-repeat 50% 100%;
+      background: url('/link-hover.svg') no-repeat 50% 100%;
     }
   }
 }
