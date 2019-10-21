@@ -31,9 +31,9 @@
 	<title>Geek Beer - A Tech Meetup</title>
 </svelte:head>
 
-<h1>Geek Beer!</h1>
+<h1 data-test="geek-beer">Geek Beer!</h1>
 
-<ul class="event-list">
+<ul data-test="geek-beer-events" class="event-list">
     {#each events as event}
         <li>
         {event.title}
