@@ -1,6 +1,10 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "geek-beer-site",
+  "description": "Source code for the Geek Beer - A tech meetup website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekbeer/geek-beer-site.git"
+  },
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
