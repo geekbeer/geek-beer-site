@@ -32,17 +32,4 @@
     }
   }
 }
-
-@media only screen and (min-width: 1200px) {
-  .logotype {
-    margin: 2rem 0;
-
-    > a {
-      > img {
-        height: auto;
-        width: 380px;
-      }
-    }
-  }
-}
 </style>
