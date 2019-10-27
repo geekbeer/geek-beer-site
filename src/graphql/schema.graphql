@@ -45,12 +45,11 @@ type Page {
 
 union PageContent = ContentSection | Event | Talk | Speaker | Venue | Image
 type Query {
-  event(id: ID, uri: String): Event
+  event(uri: String): Event
   events: [Event]
   talk(id: ID!): Talk
   talks: [Talk]
   speaker(id: ID): Speaker
-  startPage: StartPage
   page(uri: String!): Page
 }
 
@@ -62,13 +61,6 @@ type Speaker {
   image: Image
 }
 
-type StartPage {
-  id: ID!
-  pageTitle: String
-  pageDescription: String
-  content: [PageContent]
-}
-
 type Talk {
   id: ID!
   title: String
@@ -76,7 +68,6 @@ type Talk {
   speaker: Speaker
 }
 
-# The `Upload` scalar type represents a file upload.
 scalar Upload
 
 type Venue {
@@ -88,4 +79,3 @@ type Venue {
   address2: String
   postalCode: String
 }
-
