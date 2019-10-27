@@ -2,16 +2,14 @@
   import {client} from '../../graphql/client';
   import eventQuery from '../../graphql/queries/event.gql.js';
 
-  export async function preload({ params, query }) {
-    const event = client.query({
+  export async function preload({ params }) {
+    const result = await client.query({
       query: eventQuery,
-      variables: {"uri": "/karlskrona-open-arena-27-september-2018"}
+      variables: {"uri": params.slug}
     });
 
-    const result = await Promise.all([event]);
-
     return {
-      event: result[0].data.event,
+      event: result.data.event,
     }
   }
 </script>
