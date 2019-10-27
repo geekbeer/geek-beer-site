@@ -61,7 +61,7 @@ a {
 }
 
 footer {
-    background: #09233B url('/tri-bar.svg') repeat-x 0 0;
+    background: #09233B url('/tri-bar-180.svg') repeat-x 0 0;
     color: #ffffff;
     padding: 4rem 0;
     text-align: center;
