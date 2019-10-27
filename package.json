@@ -28,6 +28,7 @@
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "isomorphic-unfetch": "^3.0.0",
+    "marked": "^0.7.0",
     "polka": "next",
     "sirv": "^0.4.0",
     "svelte-apollo": "^0.3.0"
