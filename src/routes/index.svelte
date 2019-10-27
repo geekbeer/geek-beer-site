@@ -36,7 +36,7 @@
 <ul data-test="geek-beer-events" class="event-list">
     {#each events as event}
         <li>
-        {event.title}
+            <a href="/meetups/{event.uri}">{event.title}</a>
         </li>
     {/each}
 </ul>
