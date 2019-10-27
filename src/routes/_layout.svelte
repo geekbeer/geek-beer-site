@@ -35,6 +35,7 @@ body {
 }
 
 main {
+    min-height: 100vh;
     max-width: 980px;
     margin: 0 auto;
 }

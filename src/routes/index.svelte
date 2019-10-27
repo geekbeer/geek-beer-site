@@ -1,4 +1,5 @@
 <script context="module">
+  import md from '../markdown';
   import {client} from '../graphql/client';
   import pageQuery from '../graphql/queries/page.gql.js';
   import eventsQuery from '../graphql/queries/events.gql.js';
@@ -30,8 +31,9 @@
 <svelte:head>
 	<title>Geek Beer - A Tech Meetup</title>
 </svelte:head>
-
-<h1 data-test="geek-beer">Geek Beer!</h1>
+<article>
+{@html md(page.content[0].body)}
+{@html md(page.content[1].body)}
 
 <ul data-test="geek-beer-events" class="event-list">
     {#each events as event}
@@ -40,3 +42,4 @@
         </li>
     {/each}
 </ul>
+</article>

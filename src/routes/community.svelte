@@ -1,4 +1,5 @@
 <script context="module">
+  import md from '../markdown';
   import {client} from '../graphql/client';
   import pageQuery from '../graphql/queries/page.gql.js';
 
@@ -22,4 +23,6 @@
 	<title>{page.pageTitle}</title>
 </svelte:head>
 
-<h1>{page.pageTitle}</h1>
+<article>
+{@html md(page.content[0].body)}
+</article>
