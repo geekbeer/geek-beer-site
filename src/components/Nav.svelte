@@ -53,7 +53,9 @@
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 100vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
   &.is-open {
     background-color: #09233B;

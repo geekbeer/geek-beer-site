@@ -18,6 +18,9 @@
 </footer>
 
 <style type="text/scss">
+* {
+    box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
@@ -38,6 +41,7 @@ main {
     min-height: 100vh;
     max-width: 980px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 main h1 {
@@ -66,5 +70,11 @@ footer {
     color: #ffffff;
     padding: 4rem 0;
     text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  main {
+    padding: 0;
+  }
 }
 </style>
