@@ -1,6 +1,6 @@
 <h1 class="logotype">
     <a href="/">
-        <img src="/geek-beer.svg" alt="Geek Beer - A Tech Meetup">
+        <img src="/geek-beer-logo.svg" alt="Geek Beer - A Tech Meetup">
     </a>
 </h1>
 
